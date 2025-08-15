@@ -8,7 +8,7 @@ steps:
     - '-d'
     - '-r'
     - 'dags'
-    - 'gs://us-central1-composer-airflo-f3b665a4-bucket/dags'
+    - 'gs://projectID/dags'
 - name: gcr.io/cloud-builders/gsutil
   args:
     - '-m'
@@ -16,6 +16,6 @@ steps:
     - '-d'
     - '-r'
     - 'codes'
-    - 'gs://us-central1-composer-airflo-f3b665a4-bucket/codes'
+    - 'gs://projectID/codes'
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
