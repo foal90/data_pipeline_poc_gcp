@@ -2,8 +2,8 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 
-S3_DATA_SOURCE_PATH = 'gs://us-central1-composer-airflo-f3b665a4-bucket/data' # location of csv data file
-S3_DATA_OUTPUT_PATH = 'gs://us-central1-composer-airflo-f3b665a4-bucket/output_files' # output files saving location
+S3_DATA_SOURCE_PATH = 'gs://projectID/data' # location of csv data file
+S3_DATA_OUTPUT_PATH = 'gs://projectID/output_files' # output files saving location
 
 def func_run():
   spark = SparkSession.builder.appName('hmda_app').getOrCreate()
