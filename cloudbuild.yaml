@@ -1,0 +1,21 @@
+steps:
+- name: ubuntu
+  args: ['bash', '-c', "echo '$COMMIT_SHA' > REVISION.txt"]
+- name: gcr.io/cloud-builders/gsutil
+  args:
+    - '-m'
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'dags'
+    - 'gs://us-central1-composer-airflo-f3b665a4-bucket/dags'
+- name: gcr.io/cloud-builders/gsutil
+  args:
+    - '-m'
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'codes'
+    - 'gs://us-central1-composer-airflo-f3b665a4-bucket/codes'
+options:
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
