@@ -13,7 +13,6 @@ A data pipeline is a set of processes that move, transform, and load data from a
 
 This process ensures that the pipeline is automated, scalable, and efficient, leveraging the pay-as-you-go nature of GCP services.
 
-\<br\>
 
 A typical pipeline workflow in Airflow, as visualized in the provided image, would follow a sequence of tasks:
 
@@ -24,4 +23,4 @@ A typical pipeline workflow in Airflow, as visualized in the provided image, wou
 5. **Delete Cluster**: The Dataproc cluster is shut down to save costs.  
 6. **End**: The DAG successfully finishes its execution.
 
-\<br\>
+<img width="1107" height="204" alt="Captura de pantalla 2025-08-14 a la(s) 18 39 37" src="https://github.com/user-attachments/assets/bf98bab7-e0e0-4a67-b6c8-f488fbf5b383" />
